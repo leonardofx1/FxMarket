@@ -1,52 +1,27 @@
 import * as S from "./style";
-import "../../style/swiperStyle.css";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import SwiperHome from "./SwiperHome";
 
-import 'swiper/css/effect-cards';
 import logo from "../../assets/img/logo.gif";
-import adestramento from "../../assets/img/adestramento.png";
 
 const HomeMain = () => {
   return (
     <>
       <S.Main>
-        <S.ContainerLogo>
-          <img src={logo} alt="" />
-        </S.ContainerLogo>
+        <S.Presentation>
+          <S.ContainerLogo>
+            <img src={logo} alt="" />
+          </S.ContainerLogo>
+            <p>
+              Bem-vindo à nossa loja online! Aqui você encontrará uma seleção
+              cuidadosamente selecionada de produtos de alta qualidade, todos
+              com links de afiliados para que você possa comprar com confiança.
+              Aproveite nossas ofertas exclusivas e comece a fazer compras
+              agora!
+            </p>
+        </S.Presentation>
         <S.ContainerProdutos>
-        <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
-      >
-            <SwiperSlide>
-              <img className="slide__item" src={adestramento} alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img className="slide__item" src={adestramento} alt="" />
-            </SwiperSlide>{" "}
-            <SwiperSlide>
-              <img className="slide__item" src={adestramento} alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img className="slide__item" src={adestramento} alt="" />
-            </SwiperSlide> <SwiperSlide>
-              <img className="slide__item" src={adestramento} alt="" />
-            </SwiperSlide> <SwiperSlide>
-              <img className="slide__item" src={adestramento} alt="" />
-            </SwiperSlide>
-          </Swiper>
+          <SwiperHome />
         </S.ContainerProdutos>
       </S.Main>
     </>

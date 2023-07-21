@@ -13,20 +13,47 @@ export const Main = styled.main `
 
     background-color: ${thema.darkMedium};
 `
+export const Presentation = styled.section `
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
 
-export const ContainerLogo = styled.div `
-    width: 400px;
-    height: 400px;
+    width: 40%;
+    min-width: 320px;
+    height: auto;
+    padding: 1em;
 
-    overflow: hidden;
-
-    border-radius: 50%;
-    border:2px solid  white;
     img {
         display: block;
         width: 100%;
         height:100%;
     }
+
+    p {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: white;
+        text-align: justify;
+        line-height: 1.5rem;
+        font-family: sans-serif;
+    }
+`
+
+
+export const ContainerLogo = styled.div `
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 320px;
+    height: 320px;
+    min-width: 320px;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+    border:2px solid  white;
 `
 export const ContainerProdutos = styled.section `
     display: flex;
