@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { thema } from '../../style/thema'
+import { thema } from '../../../style/thema'
 
 export const Main = styled.main `
     display: flex;

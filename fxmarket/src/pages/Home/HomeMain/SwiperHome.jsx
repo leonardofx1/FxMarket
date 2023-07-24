@@ -1,8 +1,8 @@
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import "../../style/swiperStyle.css";
+import "../../../style/swiperStyle.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import adestramento from "../../assets/img/adestramento.png";
+import adestramento from "../../../assets/img/adestramento.png";
 
 const SwiperHome = () => {
 

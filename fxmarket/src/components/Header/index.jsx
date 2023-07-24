@@ -4,7 +4,8 @@ import * as S from "./style";
 
 import logoTransparente from "../../assets/img/logoTransparente.png";
 import { Link } from "react-router-dom";
-import Home from "../../pages/Home";
+
+
 
 const Header = () => {
   return (
@@ -15,10 +16,10 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <Link to={Home}>Home</Link>
+            <Link to='/'>Home</Link>
           </li>
           <li>
-            <Link>Produtos</Link>
+            <Link to='/produtos'>Produtos</Link>
           </li>
           <li>
             <Link>Sobre</Link>

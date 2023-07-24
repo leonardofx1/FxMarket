@@ -2,7 +2,7 @@ import * as S from "./style";
 
 import SwiperHome from "./SwiperHome";
 
-import logo from "../../assets/img/logo.gif";
+import logo from "../../../assets/img/logo.gif";
 
 const HomeMain = () => {
   return (
