@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./style";
 
-import adestramento from "../../assets/img/adestramento.png";
+import adestramento from "../../assets/img/adestramento.jpg";
 
 const CardProduct = () => {
   return (
@@ -10,8 +10,10 @@ const CardProduct = () => {
         <li>
           <img src={adestramento} alt="" />
         </li>
-        <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, tempore non repellendus totam quae officiis dignissimos delectus labore porro? Assumenda vitae fuga distinctio illum sequi nam beatae deleniti in sapiente.</p></li>
-        <li><button>Detalhes</button></li>
+        <li>
+          <p> você aprenderá como treinar o seu cão de maneira gentil e eficaz</p>
+        </li>
+        <li><h2>R$ 24,90</h2></li>
       </S.CardBody>
     </>
   );

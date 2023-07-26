@@ -2,35 +2,39 @@ import styled from "styled-components";
 import { thema } from "../../style/thema";
 export const CardBody = styled.ul`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-
-  width: 90%;
-  height: 150px;
-
-  position: relative;
-
+  margin: 1rem;
+  width: 200px;
+  height: 320px;
+  overflow: hidden;
+  
+  cursor: pointer;
   border-radius: 15px;
   background-color: ${thema.cinzaMedium};
   li p {
     width: 100%;
     font-size: 1.2rem;
+    color: #665e5d;
   }
 
   li img {
     width: 200px;
-    height: auto;
+    height: 200px;
+    transition: all ease-in-out 200ms;
   }
-  li button {
-    width: 100px;
-    padding: 0.5rem;
-    position: absolute;
-    background-color: ${thema.darkMedium};
-    color: white;
-    border-radius: 5px;
-    border: none;
-    bottom: 15px;
-    right: 10px;
+  li h2 {
+    width: 100%;
+    text-align: start;
+    color: #3a5cb7;
+  }
+  li p:hover {
+    color: #3a5cb7;
+  }
+  li img:hover {
+    transform: scale(1.2);
+  }
+  li {
+    overflow: hidden;
   }
 `;

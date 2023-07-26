@@ -6,22 +6,28 @@ export const MainContainer = styled.main`
     max-height: auto;
 
     width: 100%;
-    height: 100vh;
 
     margin: 0 auto;
     background-color:${thema.cinzaMedium};
 `;
 
-export const CardContainer = styled.section `
-    display: flex;
-    justify-content: center;
-    align-items: center;
+export const ContainerProdutos = styled.section `
     width: 900px;
     min-height: 100vh;
     min-width: auto;
-
-
+    height:auto;
+    padding: 1rem;
     margin: 0 auto;
 
     background-color: ${thema.white};
+`
+
+export const Bemvindos = styled.section `
+   width: 80%;
+   box-shadow: 10px 10px 5px grey;
+   margin: 1rem auto;
+    font-family: sans-serif;
+    p {
+        font-size: 1.5rem;
+    }
 `
