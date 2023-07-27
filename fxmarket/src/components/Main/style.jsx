@@ -20,14 +20,8 @@ export const ContainerProdutos = styled.section `
     margin: 0 auto;
 
     background-color: ${thema.white};
-`
 
-export const Bemvindos = styled.section `
-   width: 80%;
-   box-shadow: 10px 10px 5px grey;
-   margin: 1rem auto;
-    font-family: sans-serif;
-    p {
-        font-size: 1.5rem;
+    h1 {
+        color: ${thema.darkMedium}
     }
 `

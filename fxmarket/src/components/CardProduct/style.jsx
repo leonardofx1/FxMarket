@@ -5,22 +5,23 @@ export const CardBody = styled.ul`
   flex-direction: column;
   justify-content: space-between;
   margin: 1rem;
-  width: 200px;
-  height: 320px;
+  width: 100%;
+  height: 350px;
   overflow: hidden;
   
   cursor: pointer;
   border-radius: 15px;
   background-color: ${thema.cinzaMedium};
   li p {
+    text-align: justify;
     width: 100%;
     font-size: 1.2rem;
     color: #665e5d;
   }
 
   li img {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 250px;
     transition: all ease-in-out 200ms;
   }
   li h2 {
@@ -37,4 +38,5 @@ export const CardBody = styled.ul`
   li {
     overflow: hidden;
   }
+  li {}
 `;
