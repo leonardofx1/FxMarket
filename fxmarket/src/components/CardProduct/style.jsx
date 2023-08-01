@@ -6,17 +6,23 @@ export const CardBody = styled.ul`
   justify-content: space-between;
   margin: 1rem;
   width: 100%;
-  height: 350px;
+  height: auto;
   overflow: hidden;
-  
+
   cursor: pointer;
   border-radius: 15px;
-  background-color: ${thema.cinzaMedium};
+  background-color: ${thema.white};
   li p {
-    text-align: justify;
+    text-align: start;
+
     width: 100%;
-    font-size: 1.2rem;
-    color: #665e5d;
+    height: auto;
+    font-size: small;
+    color: black;
+    overflow: auto;
+    margin: 0 5px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
   li img {

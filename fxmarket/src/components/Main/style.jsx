@@ -8,7 +8,7 @@ export const MainContainer = styled.main`
     width: 100%;
 
     margin: 0 auto;
-    background-color:${thema.cinzaMedium};
+    background-color:${thema.white};
 `;
 
 export const ContainerProdutos = styled.section `
@@ -19,7 +19,7 @@ export const ContainerProdutos = styled.section `
     padding: 1rem;
     margin: 0 auto;
 
-    background-color: ${thema.white};
+    background-color: ${thema.cinzaMedium};
 
     h1 {
         color: ${thema.darkMedium}

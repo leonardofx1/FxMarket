@@ -11,7 +11,7 @@ const CardProduct = () => {
           <img src={adestramento} alt="" />
         </li>
         <li>
-          <p> você aprenderá como treinar o seu cão de maneira gentil e eficaz</p>
+          <p>Você está cansado de lidar com comportamentos indesejados do seu cão? Aprenda a treiná-lo de maneira eficaz com o nosso novo ebook de adestramento canino! Com dicas e técnicas comprovadas, você pode ajudar o seu cão a se comportar melhor em qualquer situação.</p>
         </li>
         <li><h2>R$ 24,90</h2></li>
       </S.CardBody>
