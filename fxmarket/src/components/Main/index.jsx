@@ -1,8 +1,16 @@
+import useFetchDocs from "../../firebase/getDoc";
 import CardProduct from "../CardProduct";
 import SwipperProduct from "../Swipper";
 import * as S from "./style";
+import { useEffect } from "react";
 
 const Main = () => {
+
+  const docs =  useFetchDocs()
+  useEffect(()=>{
+    console.log(docs)
+ 
+  }, [docs])
   return (
     <S.MainContainer>
       <S.ContainerProdutos>

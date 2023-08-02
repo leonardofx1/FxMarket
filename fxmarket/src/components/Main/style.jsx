@@ -12,7 +12,7 @@ export const MainContainer = styled.main`
 `;
 
 export const ContainerProdutos = styled.section `
-    width: 900px;
+    width: 1000px;
     min-height: 100vh;
     min-width: auto;
     height:auto;

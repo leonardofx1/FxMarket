@@ -21,7 +21,7 @@ export const Header = styled.header `
     
             a {
                 font-size: 1.2rem;
-                color:green;
+                color:white;
             }
         }
     }

@@ -5,22 +5,22 @@ export const CardBody = styled.ul`
   flex-direction: column;
   justify-content: space-between;
   margin: 1rem;
-  width: 100%;
+  width: 300px;
   height: auto;
   overflow: hidden;
 
   cursor: pointer;
   border-radius: 15px;
   background-color: ${thema.white};
-  li p {
+  li h2 {
     text-align: start;
-
+    font-size: 1.2rem;
     width: 100%;
     height: auto;
-    font-size: small;
     color: black;
     overflow: auto;
     margin: 0 5px;
+    font-weight:600;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
@@ -30,7 +30,7 @@ export const CardBody = styled.ul`
     height: 250px;
     transition: all ease-in-out 200ms;
   }
-  li h2 {
+  li p {
     width: 100%;
     text-align: start;
     color: #3a5cb7;
