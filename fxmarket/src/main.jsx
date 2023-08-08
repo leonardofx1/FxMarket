@@ -6,6 +6,7 @@ import { register } from "swiper/element/bundle";
 
 import Home from "./pages/Home/Home";
 import Product from "./pages/Product/Product";
+import Admin from "./pages/Admin";
 
 register();
 
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/produtos", element: <Product /> },
+      {path:'/admin', element:<Admin />}
     ],
   },
 ]);

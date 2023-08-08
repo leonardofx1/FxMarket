@@ -1,4 +1,4 @@
-import useFetchDocs from "../../firebase/getDoc";
+import useFetchDocs from "../../firebase/firebaseUtils/useFetchDocs";
 import CardProduct from "../CardProduct";
 import SwipperProduct from "../Swipper";
 import * as S from "./style";
