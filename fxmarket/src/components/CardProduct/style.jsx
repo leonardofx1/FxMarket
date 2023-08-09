@@ -21,7 +21,7 @@ export const CardBody = styled.ul`
     text-transform: lowercase;
     font-weight: 700;
     line-height: 16px;
-    height: 32px;
+    height: 45px;
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;

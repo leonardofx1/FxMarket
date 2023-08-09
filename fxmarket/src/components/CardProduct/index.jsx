@@ -13,8 +13,8 @@ const CardProduct = () => {
         <li>
           <h2>Adestramento Canino em Casa Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, architecto accusamus officiis aspernatur repellendus quam? Architecto error om</h2>
           </li>
-          <li> <S.OldPrice> Em apenas <strong> 7x  R$ 11,17  no cartão </strong></S.OldPrice> </li>
-        <li>  <p> R$ 24,90</p></li>
+  
+        <li> <S.OldPrice> Em apenas <strong> 7x  R$ 11,17  no cartão </strong></S.OldPrice> <p> R$ 24,90</p></li>
       </S.CardBody>
     </>
   );
