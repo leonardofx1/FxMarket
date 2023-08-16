@@ -4,5 +4,5 @@ export const thema = {
     darkMedium: '#101111',
     cinzaMedium: '#F0F2F5',
     white: '#FFFFFF',
-    priceColor: '#565a5f',
+    priceColor: 'green',
 }

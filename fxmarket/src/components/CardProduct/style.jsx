@@ -8,7 +8,7 @@ export const CardBody = styled.ul`
 
   margin: 1rem;
   width: 232px;
-  height: 431px;
+  height: 400px;
   overflow: hidden;
 
   box-shadow:.2px .2px 8px rgba(0, 0, 0, 0.37);
@@ -21,7 +21,7 @@ export const CardBody = styled.ul`
     text-transform: lowercase;
     font-weight: 700;
     line-height: 16px;
-    height: 45px;
+    height: 50px;
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -30,7 +30,7 @@ export const CardBody = styled.ul`
 
   li img {
     width: 100%;
-    height: 100%;
+    height: 350px;
     transition: all ease-in-out 200ms;
 
   }

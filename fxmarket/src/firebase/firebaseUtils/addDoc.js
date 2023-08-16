@@ -1,13 +1,15 @@
 import {addDoc, collection} from 'firebase/firestore'
 import { db } from '../firebaseSdk'
 
+const createCard = (data, urlImg) => {
 
 
-const addProduct = async () => {
+   return { ...data, img: urlImg}
+ }
 
-
-    const response = await addDoc(collection(db, 'product') ,{
-        name:'leonardo'})
+const addProduct = async (data, urlImg) => {
+    const card =   createCard(data, urlImg)
+    const response = await addDoc(collection(db, 'carro') ,card)
 
 }
 

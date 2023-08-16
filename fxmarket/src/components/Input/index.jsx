@@ -1,12 +1,12 @@
 
 
-const Input = ({register, name, type }) => {
+const Input = ({register, name, type, placeHolder}) => {
 
     return (
         <>
         <label htmlFor="">
-            {name}
-            <input type={type} {...register(name)} />
+            <p>{placeHolder}</p>
+            <input type={type} {...register(name)} placeholder={placeHolder}/>
         </label>
         </>
     )
