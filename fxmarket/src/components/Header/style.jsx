@@ -5,11 +5,13 @@ import { thema } from '../../style/thema'
 export const Header = styled.header `
     display:flex;
     justify-content: space-between;
-    align-items: center;
+
     width:100%;
-    height: auto;
+    height: 100vh;
+
     background-color:${thema.darkfull};
     ul {
+        margin: 2rem;
         display: flex;
         flex-direction: row;
         gap:1rem;
@@ -30,4 +32,14 @@ export const Header = styled.header `
         width: 50px;
         padding: .3em;
     }
+
+`
+
+export const ImagenBackground = styled.img `
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom:0;
+    left:0;
+
 `

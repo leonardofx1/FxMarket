@@ -3,6 +3,7 @@ import React from "react";
 import * as S from "./style";
 
 import logoTransparente from "../../assets/img/logoTransparente.png";
+import logo  from '../../assets/img/logo.gif'
 import { Link } from "react-router-dom";
 
 
@@ -26,6 +27,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+      <S.ImagenBackground src={logo} />
     </S.Header>
   );
 };

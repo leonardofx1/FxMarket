@@ -9,7 +9,7 @@ const createCard = (data, urlImg) => {
 
 const addProduct = async (data, urlImg) => {
     const card =   createCard(data, urlImg)
-    const response = await addDoc(collection(db, 'carro') ,card)
+    const response = await addDoc(collection(db, 'product') ,card)
 
 }
 

@@ -25,3 +25,12 @@ export const ContainerProdutos = styled.section `
         color: ${thema.darkMedium}
     }
 `
+export const Products = styled.section `
+    display: flex;
+    justify-content: space-beteween;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+
+
+`

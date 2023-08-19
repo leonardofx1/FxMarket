@@ -7,8 +7,8 @@ export const CardBody = styled.ul`
   align-items: center;
 
   margin: 1rem;
-  width: 232px;
-  height: 400px;
+  width: 202px;
+  height: 380px;
   overflow: hidden;
 
   box-shadow:.2px .2px 8px rgba(0, 0, 0, 0.37);
