@@ -1,12 +1,19 @@
 import React from "react";
 import * as S from "./style";
 
+import deleteDocCard from "../../firebase/firebaseUtils/deleteDoc";
 
 
-const CardProduct = ({ quantidade, img, valorProduto, valorParcelas, descricao}) => {
+
+const CardProduct = ({ quantidade, img, valorProduto, valorParcelas, descricao, id}) => {
+  const deleteDoc = () => deleteDocCard(id)
+
   return (
     <>
-      <S.CardBody>
+      <S.CardBody id={id}>
+        <S.Delete onClick={deleteDoc}>
+          X
+        </S.Delete>
         <li>
           <img src={img} alt="" />
         </li>

@@ -8,6 +8,7 @@ const NavTopics = () => {
     return (
         <S.ContainerTopics>
             <Topics img={adestramento} link={'oi'} titulo='teste' />
+            <Topics img={adestramento} link={'oi'} titulo='teste' />     <Topics img={adestramento} link={'oi'} titulo='teste' />     <Topics img={adestramento} link={'oi'} titulo='teste' />     <Topics img={adestramento} link={'oi'} titulo='teste' />     <Topics img={adestramento} link={'oi'} titulo='teste' />
         </S.ContainerTopics>
     )
 }

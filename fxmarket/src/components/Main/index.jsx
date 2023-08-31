@@ -1,5 +1,6 @@
 import useFetchDocs from "../../firebase/firebaseUtils/useFetchDocs";
-import CardProduct from "../CardProduct";
+
+import SectionProducts from "../SectionProducts";
 
 import NavTopics from "../NavTopics";
 
@@ -16,18 +17,11 @@ const Main = () => {
         {docs.length > 0 && <SwipperProduct docs={docs} />}
         <NavTopics />
       <S.Products>
-      {docs.length > 0 &&
-          docs.map(
-            ({ quantidade, img, valorProduto, valorParcelas, descricao }) => (
-              <CardProduct
-                img={img}
-                valorParcelas={valorParcelas}
-                quantidade={quantidade}
-                valorProduto={valorProduto}
-                descricao={descricao}
-              />
-            )
-          )}
+    
+          <SectionProducts titulo='E-books: a maneira mais fácil e acessível de expandir seus conhecimentos!' docs={docs}/> 
+      </S.Products>
+      <S.Products>
+        <SectionProducts titulo='Não perca a chance de ter os tênis mais desejados do momento!' docs={docs} />
       </S.Products>
       </S.ContainerProdutos>
     </S.MainContainer>

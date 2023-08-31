@@ -2,18 +2,19 @@ import styled from  'styled-components'
 
 
 export const ContainerTopics = styled.div `
+    display:flex;
+    justify-content: space-evenly;
     width: 100%;
     height:auto;
     padding: 5px;
     border-bottom: 1px solid black;
+    margin: 1.5rem 0;
 
     a {
         display:flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        
-;
         width: 120px;
         height: 120px;
         img {
