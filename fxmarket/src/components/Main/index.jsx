@@ -12,6 +12,7 @@ const Main = () => {
 
   return (
     <S.MainContainer>
+    
       <S.ContainerProdutos>
         <h1>Produtos incriveis com os melhores preços do mercado </h1>
         {docs.length > 0 && <SwipperProduct docs={docs} />}

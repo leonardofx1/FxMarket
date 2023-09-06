@@ -2,16 +2,18 @@ import React from "react";
 
 import * as S from "./style";
 
-
-import logo  from '../../assets/img/logo.gif'
+import logoTransparente from "../../../../assets/img/logoTransparente.png";
+import logo  from '../../../../assets/img/logo.gif'
 import { Link } from "react-router-dom";
 
 
 
-const Header = () => {
+const HeaderProduct = () => {
   return (
     <S.Header>
-      <img src={logo} />
+      <h1>
+        <img src={logoTransparente} alt="logo.gif" />
+      </h1>
       <nav>
         <ul>
           <li>
@@ -25,11 +27,9 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <section>
-        <Link>Login</Link>        <Link>Cadastro</Link>
-      </section>
+      <S.ImagenBackground src={logo} />
     </S.Header>
   );
 };
 
-export default Header;
+export default HeaderProduct;

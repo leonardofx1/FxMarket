@@ -21,6 +21,7 @@ export const CardBody = styled.ul`
     color:${thema.priceColor};
     font-size: 14px;
     text-transform: lowercase;
+    text-align: center;
     font-weight: 700;
     line-height: 16px;
     height: 50px;

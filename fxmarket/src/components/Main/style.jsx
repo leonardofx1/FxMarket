@@ -34,13 +34,14 @@ export const Products = styled.section`
   height: 100%;
   margin: 1.5rem;
 
-
   div:has(h2) {
     width: 100%;
     min-height: 50px;
     margin-bottom: 1rem;
 
-    font-family: 'Lobster', cursive;
+    font-family: "Libre Baskerville", serif;
+
     text-align: center;
+    color: ${thema.priceColor};
   }
 `;

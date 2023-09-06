@@ -5,12 +5,15 @@ import deleteDocCard from "../../firebase/firebaseUtils/deleteDoc";
 
 
 
-const CardProduct = ({ quantidade, img, valorProduto, valorParcelas, descricao, id}) => {
+const CardAdmin = ({ quantidade, img, valorProduto, valorParcelas, descricao, id}) => {
+  const deleteDoc = () => deleteDocCard(id)
 
   return (
     <>
       <S.CardBody id={id}>
-       
+        <S.Delete onClick={deleteDoc}>
+          X
+        </S.Delete>
         <li>
           <img src={img} alt="" />
         </li>
@@ -24,4 +27,4 @@ const CardProduct = ({ quantidade, img, valorProduto, valorParcelas, descricao, 
   );
 };
 
-export default CardProduct;
+export default CardAdmin;

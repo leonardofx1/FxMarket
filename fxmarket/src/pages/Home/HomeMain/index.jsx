@@ -3,10 +3,12 @@ import * as S from "./style";
 import SwiperHome from "./SwiperHome";
 
 import logo from "../../../assets/img/logo.gif";
+import Header from '../../../components/Header'
 
 const HomeMain = () => {
   return (
     <>
+    <Header />
       <S.Main>
         <S.Presentation>
           <S.ContainerLogo>
