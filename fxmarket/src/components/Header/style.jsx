@@ -17,7 +17,6 @@ export const Header = styled.header `
         justify-content: space-between;
         width:250px;
         height: auto;
-
         margin-right: 20px;
 
         color:white;
@@ -43,13 +42,17 @@ export const Header = styled.header `
         padding: .3em;
     }
     section {
-        display:flex;
-        align-items: center;
+        margin: 2rem;
+        display: flex;
+        flex-direction: row;
         justify-content: space-between;
-
-        width: 130px;
+        width:150px;
         height: auto;
-        margin-right: 15px;
+
+
+
+        color:white;
+        
        a {
         font-size: 1.2rem;
                 color:white;

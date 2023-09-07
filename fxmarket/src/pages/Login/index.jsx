@@ -15,17 +15,17 @@ const Login = ()=> {
         <S.Main>
      <S.LoginForm>
      <Input 
-        placeHolder='usuario'
+        placeHolder='usuário'
         register={register}
         name='nameUSer'
         type='text'
          /> <Input 
-         placeHolder='usuario'
+         placeHolder='senha'
          register={register}
          name='nameUSer'
-         type='text'
+         type='password'
           />
-         <p>oi</p>
+      <button>Entrar</button>
      </S.LoginForm>
         </S.Main>
      </>

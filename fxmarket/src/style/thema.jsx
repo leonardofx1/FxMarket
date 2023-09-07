@@ -5,4 +5,6 @@ export const thema = {
     cinzaMedium: '#F0F2F5',
     white: '#FFFFFF',
     priceColor: 'green',
+
+    fontFamily: "Libre Baskerville"
 }
