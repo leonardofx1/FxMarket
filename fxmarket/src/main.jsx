@@ -8,6 +8,7 @@ import Home from "./pages/Home/Home";
 import Product from "./pages/Product/Product";
 import Admin from "./pages/Admin";
 import Login from "./pages/Login";
+import Cadastro from "./pages/Cadastro"
 
 register();
 
@@ -24,7 +25,8 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/produtos", element: <Product /> },
       {path:'/admin', element:<Admin />},
-      {path:'/login' , element:<Login />}
+      {path:'/login' , element:<Login />},
+      {path:'/cadastro', element:<Cadastro />}
     ],
   },
 ]);
