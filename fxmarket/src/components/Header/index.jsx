@@ -26,7 +26,7 @@ const Header = () => {
         </ul>
       </nav>
       <section>
-        <Link>Login</Link>        <Link>Cadastro</Link>
+        <Link to='/login'>Login</Link>        <Link to='cadastro'>Cadastro</Link>
       </section>
     </S.Header>
   );

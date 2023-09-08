@@ -3,7 +3,7 @@ import { thema } from "../../style/thema";
 
 export const Main = styled.main`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
   height: 100vh;
@@ -39,7 +39,7 @@ export const LoginForm = styled.form`
     box-shadow: 0.4px 0.4px 5px 1px ${thema.darkfull};
 
     &:focus {
-        outline: 1px solid green;
+        outline: 2px solid green;
       
     }
     
@@ -62,5 +62,12 @@ export const LoginForm = styled.form`
 
     font-size:1.2rem;
     font-weight:bold;
+
+    transition: all 100ms ease-in;
+
+    &:hover {
+        background-color:green;
+        color:black;
+    }
   }
 `;
