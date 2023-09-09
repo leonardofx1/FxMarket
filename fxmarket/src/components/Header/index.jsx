@@ -1,12 +1,11 @@
 import React from "react";
+import {BiLogIn, BiHome} from 'react-icons/bi'
+import {MdProductionQuantityLimits, MdOutlineApartment, MdOutlineAssignmentInd} from 'react-icons/md'
 
 import * as S from "./style";
 
-
-import logo  from '../../assets/img/logo.gif'
+import logo from "../../assets/img/logo.gif";
 import { Link } from "react-router-dom";
-
-
 
 const Header = () => {
   return (
@@ -15,18 +14,19 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <Link to='/'>Home</Link>
+            <Link to="/"> <BiHome />Home</Link>
           </li>
           <li>
-            <Link to='/produtos'>Produtos</Link>
+            <Link to="/produtos">  < MdProductionQuantityLimits />Produtos</Link>
           </li>
           <li>
-            <Link>Sobre</Link>
+            <Link> <MdOutlineApartment/>Sobre</Link>
           </li>
         </ul>
       </nav>
       <section>
-        <Link to='/login'>Login</Link>        <Link to='/cadastro'>Cadastro</Link>
+        <Link to="/login"><BiLogIn />Login</Link>
+        <Link to="/cadastro"> <MdOutlineAssignmentInd />Cadastro</Link>
       </section>
     </S.Header>
   );

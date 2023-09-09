@@ -12,18 +12,22 @@ const Main = () => {
 
   return (
     <S.MainContainer>
-    
       <S.ContainerProdutos>
         <h1>Produtos incriveis com os melhores preços do mercado </h1>
         {docs.length > 0 && <SwipperProduct docs={docs} />}
         <NavTopics />
-      <S.Products>
-    
-          <SectionProducts titulo='E-books: a maneira mais fácil e acessível de expandir seus conhecimentos!' docs={docs}/> 
-      </S.Products>
-      <S.Products>
-        <SectionProducts titulo='Não perca a chance de ter os tênis mais desejados do momento!' docs={docs} />
-      </S.Products>
+        <S.Products>
+          <SectionProducts
+            titulo="E-books: a maneira mais fácil e acessível de expandir seus conhecimentos!"
+            docs={docs}
+          />
+        </S.Products>
+        <S.Products>
+          <SectionProducts
+            titulo="Não perca a chance de ter os tênis mais desejados do momento!"
+            docs={docs}
+          />
+        </S.Products>
       </S.ContainerProdutos>
     </S.MainContainer>
   );
