@@ -14,19 +14,15 @@ import * as S from './style'
 const Cadastro = ()=> {
 
 const auth = getAuth();
-const data = (dat) => {
-  console.log(dat)
-  createUserWithEmailAndPassword(auth, dat.nameUser, dat.password)
-  .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ..
-  });
+
+const data = async (dat) => {
+  try {
+    const createUser = await createUserWithEmailAndPassword(auth, dat.email, dat.password);
+   
+  } catch (error) {
+ 
+    console.error(error.code);
+  }
 }
   
     const {register, handleSubmit} = useForm()

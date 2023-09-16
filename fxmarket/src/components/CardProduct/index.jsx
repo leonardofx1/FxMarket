@@ -18,7 +18,7 @@ const CardProduct = ({ quantidade, img, valorProduto, valorParcelas, descricao, 
           <h2>{descricao}</h2>
           </li>
   
-        <li> <S.OldPrice> Em apenas <strong> {quantidade}x  R$ {valorParcelas}  no cartão </strong></S.OldPrice> <p> {valorProduto}R$</p></li>
+        <li> <S.OldPrice> Em apenas <strong> {quantidade}x  R$ {valorParcelas}  no cartão </strong></S.OldPrice> <S.Price>{valorProduto}R$</S.Price></li>
       </S.CardBody>
     </>
   );

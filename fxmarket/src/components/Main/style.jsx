@@ -2,17 +2,20 @@ import styled from "styled-components";
 import { thema } from "../../style/thema";
 
 export const MainContainer = styled.main`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+
   width: 100%;
   max-height: auto;
 
-  width: 100%;
-
   margin: 0 auto;
-  background-color: ${thema.white};
+  padding: 0.2rem;
 `;
 
 export const ContainerProdutos = styled.section`
-  width: 1000px;
+  width: 85%;
   min-height: 100vh;
   min-width: auto;
   height: auto;
@@ -31,7 +34,7 @@ export const Products = styled.section`
   flex-wrap: wrap;
 
   width: 100%;
-  height: 100%;
+  height: auto;
   margin: 1.5rem;
 
   div:has(h2) {
@@ -44,4 +47,14 @@ export const Products = styled.section`
     text-align: center;
     color: ${thema.priceColor};
   }
+`;
+
+export const SideBar = styled.aside`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 100%;
+  background-color: ${thema.cinzaMedium};
+  border-radius: 5px;
 `;

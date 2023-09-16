@@ -2,10 +2,10 @@ import React from 'react'
 import CardProduct from '../CardProduct'
 
 
-const  SectionProducts = ({titulo, docs})=>  {
+const  SectionProducts = ({titulo, docs, id})=>  {
   return (
     <>
-    <div>
+    <div id={id} >
         <h2>{titulo}</h2>
     </div>
     {docs.length > 0 &&

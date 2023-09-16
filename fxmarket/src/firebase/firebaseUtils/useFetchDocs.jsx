@@ -16,10 +16,10 @@ const useFetchDocs = () => {
 
   useEffect(() => {
     fetchDataDocs();
-  }, []); // Executa fetchDataDocs somente quando o componente é montado
+  }, []); 
 
   console.log(docs);
-  return docs; // Retorna o array de documentos
+  return docs;
 };
 
 export default useFetchDocs;

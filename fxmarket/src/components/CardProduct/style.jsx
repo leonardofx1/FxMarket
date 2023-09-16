@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { thema } from "../../style/thema";
 export const CardBody = styled.ul`
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -17,6 +16,10 @@ export const CardBody = styled.ul`
   
   border-radius: 15px;
   background-color: ${thema.white};
+
+  &:hover {
+    border:1px solid green;
+  }
   li h2 {
     color:${thema.priceColor};
     font-size: 14px;
@@ -37,17 +40,7 @@ export const CardBody = styled.ul`
     transition: all ease-in-out 200ms;
 
   }
-  li p {
-    width: 100%;
-    color: ${thema.priceColor};
-    font-family: Nunito, sans-serif;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 150%;
-    margin-bottom: 2px;
-    text-align: start
-    ;
-}
+
   
   li p:hover {
     color: ${thema.priceColor};
@@ -68,12 +61,23 @@ export const CardBody = styled.ul`
 
 `;
 
-export const Delete = styled.div `
-  position: absolute;
-  top: 15px;
-  right: 15px;
-`;
+
 export const OldPrice = styled.span `
   font-size: small;
-  color:${thema.priceColor}
+  color:${thema.priceColor};
+
 `;
+
+export const Price = styled.p `
+  color:blue;
+    width: 100%;
+    color: ${thema.priceColor};
+    font-family: Nunito, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    margin: 4px;
+    text-align: center;
+
+
+`
