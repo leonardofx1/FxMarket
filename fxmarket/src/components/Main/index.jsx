@@ -15,11 +15,12 @@ const Main = () => {
     <S.MainContainer>
       <S.SideBar>
        <ProductLink id='ebooks' descript='E-books' />
-       <p>leo</p>
+       <ProductLink id='receitas' descript='Receitas' />
+
       </S.SideBar>
       <S.ContainerProdutos>
         <S.Products>
-          <NavTopics />
+
           <h1>Produtos incriveis com os melhores preços do mercado </h1>
           {docs.length > 0 && <SwipperProduct docs={docs} />}
         </S.Products>

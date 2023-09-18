@@ -11,11 +11,11 @@ export const MainContainer = styled.main`
   max-height: auto;
 
   margin: 0 auto;
-  padding: 0.2rem;
+  padding: 0.5rem;
 `;
 
 export const ContainerProdutos = styled.section`
-  width: 85%;
+  width: 80%;
   min-height: 100vh;
   min-width: auto;
   height: auto;
@@ -51,10 +51,20 @@ export const Products = styled.section`
 
 export const SideBar = styled.aside`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 400px;
-  width: 100%;
+
+  height: 100px;
+  width: 15%;
+  gap: 1rem;
+
   background-color: ${thema.cinzaMedium};
   border-radius: 5px;
+  box-shadow: .1px .1px 2px .1px green;
+  & a {
+    color: ${thema.priceColor};
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
 `;
