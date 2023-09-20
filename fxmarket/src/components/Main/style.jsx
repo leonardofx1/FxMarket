@@ -4,7 +4,6 @@ import { thema } from "../../style/thema";
 export const MainContainer = styled.main`
   display: flex;
   justify-content: space-between;
-  align-items: center;
   gap: 5px;
 
   width: 100%;
@@ -12,6 +11,8 @@ export const MainContainer = styled.main`
 
   margin: 0 auto;
   padding: 0.5rem;
+
+  position:relative;
 `;
 
 export const ContainerProdutos = styled.section`
@@ -50,14 +51,19 @@ export const Products = styled.section`
 `;
 
 export const SideBar = styled.aside`
+
   display: flex;
+  top:15px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
+  position:sticky;
   height: 100px;
   width: 15%;
+
   gap: 1rem;
+  margin:5px;
 
   background-color: ${thema.cinzaMedium};
   border-radius: 5px;
@@ -66,5 +72,12 @@ export const SideBar = styled.aside`
     color: ${thema.priceColor};
     font-weight: 500;
     font-size: 1.2rem;
+    &:focus {
+      color:red;
+    }
+    &:hover {
+      text-decoration:underline;
+      
+    }
   }
 `;

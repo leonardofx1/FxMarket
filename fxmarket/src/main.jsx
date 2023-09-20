@@ -16,6 +16,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-cards";
 import useIsAdmin from "./firebase/firebaseUtils/isAdmin";
+import Termos from "./pages/Termos";
 
 register();
 
@@ -32,6 +33,7 @@ const Root = () => {
         { path: "/admin", element:isAdmin == null ? <p>carregando</p> :  isAdmin ? <Admin /> : <Navigate to="/login" />},
         { path: "/login", element: <Login /> },
         { path: "/cadastro", element: <Cadastro /> },
+        {path:"/termos" , element:<Termos />}
       ],
     },
   ]);
