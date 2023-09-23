@@ -1,7 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
 import { register } from "swiper/element/bundle";
 
 import Home from "./pages/Home/Home";
@@ -17,12 +21,12 @@ import "swiper/css/navigation";
 import "swiper/css/effect-cards";
 import useIsAdmin from "./firebase/firebaseUtils/isAdmin";
 import Termos from "./pages/Termos";
+import ProductDetails from "./pages/ProductDetails";
 
 register();
 
 const Root = () => {
   const isAdmin = useIsAdmin();
-  console.log(isAdmin);
 
   const router = createBrowserRouter([
     {
@@ -30,10 +34,21 @@ const Root = () => {
       children: [
         { path: "/", element: <Home /> },
         { path: "/produtos", element: <Product /> },
-        { path: "/admin", element:isAdmin == null ? <p>carregando</p> :  isAdmin ? <Admin /> : <Navigate to="/login" />},
+        {
+          path: "/admin",
+          element:
+            isAdmin == null ? (
+              <p>carregando</p>
+            ) : isAdmin ? (
+              <Admin />
+            ) : (
+              <Navigate to="/login" />
+            ),
+        },
         { path: "/login", element: <Login /> },
         { path: "/cadastro", element: <Cadastro /> },
-        {path:"/termos" , element:<Termos />}
+        { path: "produto", element: <ProductDetails /> },
+        { path: "/termos", element: <Termos /> },
       ],
     },
   ]);

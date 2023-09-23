@@ -5,7 +5,6 @@ import { thema } from '../../style/thema'
 export const Header = styled.header `
     display:flex;
     justify-content: space-between;
-
     width:100%;
     height: 100px;
 
