@@ -47,11 +47,12 @@ const Root = () => {
         },
         { path: "/login", element: <Login /> },
         { path: "/cadastro", element: <Cadastro /> },
-        { path: "produto", element: <ProductDetails /> },
+        { path: "/produto", element: <ProductDetails /> }, 
         { path: "/termos", element: <Termos /> },
       ],
     },
   ]);
+  
 
   return (
     <React.StrictMode>
