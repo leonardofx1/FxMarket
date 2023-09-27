@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import {BiLogIn, BiHome} from 'react-icons/bi'
-import {MdProductionQuantityLimits, MdOutlineApartment, MdOutlineAssignmentInd} from 'react-icons/md'
+import {MdProductionQuantityLimits,  MdOutlineAssignmentInd} from 'react-icons/md'
+import {GoSignOut} from 'react-icons/go'
 
 import * as S from "./style";
 
@@ -12,8 +13,9 @@ const Header = () => {
 
 
   const {signed} = useAuthStore((state)=>({signed:  state.signed }))
+  const {signOut} = useAuthStore((state)=>({signOut:  state.signOut }))
   const {user} = useAuthStore((state) =>({user: state.user}))
- 
+ const handleSignOut = () => signOut()
   return (
     <S.Header>
       <img src={logo} />
@@ -26,14 +28,16 @@ const Header = () => {
             <Link to="/produtos">  < MdProductionQuantityLimits />Produtos</Link>
           </li>
           <li>
-            <Link> <MdOutlineApartment/>Sobre</Link>
+            { signed && (<>
+            <a onClick={handleSignOut}><GoSignOut />Sair</a>
+            </>) }
           </li>
         </ul>
-      </nav>
     {!signed && (  <section>
         <Link to="/login"><BiLogIn />Login</Link>
         <Link to="/cadastro"> <MdOutlineAssignmentInd />Cadastro</Link>
       </section>)}
+      </nav>
     </S.Header>
   );
 };

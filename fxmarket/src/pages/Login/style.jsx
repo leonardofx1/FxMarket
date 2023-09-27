@@ -16,33 +16,44 @@ export const LoginForm = styled.form`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
   gap: 2rem;
+
   width: 340px;
-  height: 340px;
+  min-height: 380px;
+  max-height: auto;
+  padding: 1rem;
+
   box-shadow: 0.4px 0.4px 10px 1px ${thema.darkfull};
   border-radius: 15px;
   border: 1px solid green;
+  div {
+    width:100%;
 
+    span {
+      display:block;
+      color:red;
+    }
+  }
   label {
     color: white;
     font-family: ${thema.fontFamily};
-    width:80%;
+    width: 90%;
   }
 
   label input {
-    margin: 0.8rem;
+    margin: 0.8rem 0;
     padding: 0.5rem;
-    width:99%;
+    width: 90%;
 
     border-radius: 5px;
     border: none;
     box-shadow: 0.4px 0.4px 5px 1px ${thema.darkfull};
 
     &:focus {
-        outline: 2px solid green;
-      
+      outline: 2px solid green;
     }
-    
+
     &::placeholder {
       font-size: 1.1rem;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -50,24 +61,35 @@ export const LoginForm = styled.form`
         sans-serif;
     }
   }
+`;
 
-  button {
-    min-width: 190px;
-    border-radius: 5px;
-    background-color: transparent;
-    padding: 0.5rem;
-    cursor: pointer;
-    color: white;
-    border: 1px solid green;
+export const BtnLogin = styled.button`
+  width: 90%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
 
-    font-size:1.2rem;
-    font-weight:bold;
+  color: white;
+  border: 1px solid green;
 
-    transition: all 100ms ease-in;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 100ms ease-in;
 
-    &:hover {
-        background-color:green;
-        color:black;
-    }
+  &:hover {
+    background-color: green;
+    color: black;
   }
+`;
+
+export const LoginInGmail = styled(BtnLogin)`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  height: 50px;
+
+  border: none;
+  background-color: #ff0000bb;
 `;

@@ -24,6 +24,13 @@ export const LoginForm = styled.form`
   border-radius: 15px;
   border: 1px solid green;
   padding:1rem 0;
+
+  div {
+    width: 90%;
+    span {
+      color:red;
+    }
+  }
   label {
     color: white;
     font-family: ${thema.fontFamily};
@@ -53,10 +60,15 @@ export const LoginForm = styled.form`
   }
 
   button {
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+
     min-width: 190px;
     border-radius: 5px;
-    background-color: transparent;
     padding: 0.5rem;
+    
+    background-color: transparent;
     cursor: pointer;
     color: white;
     border: 1px solid green;

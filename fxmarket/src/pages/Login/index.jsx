@@ -1,53 +1,74 @@
-import {useForm} from 'react-hook-form'
+import { useForm } from "react-hook-form";
 
+import Header from "../../components/Header";
+import Input from "../../components/Input";
 
+import logo from "../../assets/img/logo.gif";
+import gmail from "../../assets/img/gmail.png";
+import * as S from "./style";
+import useAuthStore from "../../store/authStore";
+import { useEffect } from "react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { schemaCreateUser } from "../../components/schemas/schemasCreateUser";
 
-import Header from '../../components/Header'
-import Input from '../../components/Input'
+const Login = () => {
+  const { signInGoogle } = useAuthStore((state) => ({
+    signInGoogle: state.signInGoogle,
+  }));
 
-import logo from '../../assets/img/logo.gif' 
-import gmail from '../../assets/img/gmail.png' 
-import * as S from './style'
-import useAuthStore from '../../store/authStore'
-import { useEffect } from 'react'
+  const handleLoginGmail = (e) => {
+    e.preventDefault();
+    signInGoogle();
+  };
 
+  const handleUserLogin = (data) => {
+    console.log(data);
+  };
 
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(schemaCreateUser),
+  });
 
-const Login = ()=> {
+  return (
+    <>
+      <Header />
+      <S.Main>
+        <img src={logo} alt="" />
+        <S.LoginForm onSubmit={handleSubmit(handleUserLogin)}>
+          <div>
+            {" "}
+            <Input
+              placeHolder="e-mail"
+              register={register}
+              name="email"
+              type="text"
+            />
+            {errors.email?.message && <span> {errors.email?.message}</span>}{" "}
+          </div>
+          <div>
+            <Input
+              placeHolder="senha"
+              register={register}
+              name="password"
+              type="password"
+            />
+            {errors.password?.message && (
+              <span> {errors.password?.message}</span>
+            )}{" "}
+          </div>
+          <S.BtnLogin>entrar</S.BtnLogin>
+          <S.LoginInGmail onClick={handleLoginGmail}>
+            {" "}
+            <img src={gmail} alt="" /> entrar com o Google
+          </S.LoginInGmail>
+        </S.LoginForm>
+      </S.Main>
+    </>
+  );
+};
 
-   const {signInGoogle} = useAuthStore((state) =>({signInGoogle: state.signInGoogle}))
-   const {user} = useAuthStore((state) =>({user: state.user}))
-    const {register, handleSubmit} = useForm()
-
-   useEffect((()=> {
-      console.log(user)
-   }),[user])
-
-    
-    return (
-     <>
-        <Header />
-        <S.Main>
-         <img src={logo} alt="" />
-     <S.LoginForm onSubmit={handleSubmit}>
-     <Input 
-        placeHolder='e-mail'
-        register={register}
-        name='email'
-        type='text'
-         /> <Input 
-         placeHolder='senha'
-         register={register}
-         name='password'
-         type='password'
-          />
-      <button>Entrar</button>
-      <img src={gmail} alt="login com o google" onClick={handleSubmit(signInGoogle)} />
-     </S.LoginForm>
-        </S.Main>
-     </>
-
-    )
-}
-
-export default Login
+export default Login;

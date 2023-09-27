@@ -1,53 +1,56 @@
 import {useForm} from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod';
+
 import { MdOutlineAssignmentInd} from 'react-icons/md'
 
 import Header from '../../components/Header'
 import Input from '../../components/Input'
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import useAuthStore from '../../store/authStore'
 
-
-import logo from '../../assets/img/logo.gif' 
 import * as S from './style'
+import { schemaLoginUser } from '../../components/schemas/schemasCreateUser';
 
 
 
 const Cadastro = ()=> {
+const { createUser } = useAuthStore(state => ({createUser: state.createUser}))
 
-const auth = getAuth();
 
 const data = async (dat) => {
-  try {
-    const createUser = await createUserWithEmailAndPassword(auth, dat.email, dat.password);
-   
-  } catch (error) {
- 
-    console.error(error.code);
-  }
+  createUser(dat.email, dat.password)
 }
   
-    const {register, handleSubmit} = useForm()
+    const {register, handleSubmit, formState:{errors}} = useForm({
+      resolver:zodResolver(schemaLoginUser)
+    })
     return (
      <>
         <Header />
         <S.Main>
    
      <S.LoginForm onSubmit={handleSubmit(data)}>
-     <Input 
+   <div>
+   <Input 
         placeHolder='e-mail'
         register={register}
         name='email'
         type='email'
-         />  <Input 
+         />  
+         {errors.email?.message && <span> {errors.email?.message}</span> }      </div>   
+         <div>
+         <Input 
          placeHolder='senha'
          register={register}
          name='password'
          type='password'
-          />  <Input 
+          />       {errors.password?.message && <span> {errors.password?.message}</span> }    
+         </div>
+            <div><Input 
           placeHolder='idade'
           register={register}
           name='age'
           type='number'
-           /> 
+           /> </div>
       <button> <MdOutlineAssignmentInd />cadastre-se</button>
      </S.LoginForm>
         </S.Main>
