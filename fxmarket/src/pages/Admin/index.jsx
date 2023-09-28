@@ -1,8 +1,6 @@
 import React from "react";
 import * as S from "./style";
-import {useState} from 'react'
 
-import cardData from "../../firebase/firebaseUtils/CardData";
 import { useForm } from "react-hook-form";
 import Input from "../../components/Input";
 
