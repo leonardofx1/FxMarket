@@ -7,7 +7,7 @@ import {
   signInWithPopup,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
-import { app } from "../firebase/firebaseSdk";
+import { app } from "../firebase/firebaseUtils/firebaseSdk";
 
 const provider = new GoogleAuthProvider();
 

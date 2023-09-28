@@ -1,5 +1,5 @@
 import {doc, deleteDoc } from 'firebase/firestore'
-import { db } from '../firebaseSdk'
+import { db } from './firebaseSdk'
 
 
 const deleteDocCard =async (id) => {
