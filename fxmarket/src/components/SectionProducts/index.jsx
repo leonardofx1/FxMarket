@@ -4,7 +4,7 @@ import CardProduct from '../CardProduct'
 
 const  SectionProducts = ({titulo, docs, id})=>  {
   return (
-    <>
+    <article>
     <div id={id} >
         <h2>{titulo}</h2>
     </div>
@@ -21,7 +21,7 @@ const  SectionProducts = ({titulo, docs, id})=>  {
               />
             )
           )}
-    </>
+    </article>
   )
 }
 

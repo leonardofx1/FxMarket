@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./style";
 
-import deleteDocCard from "../../firebase/firebaseUtils/deleteDoc";
+
 
 
 

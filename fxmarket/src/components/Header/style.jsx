@@ -8,7 +8,7 @@ export const Header = styled.header`
   align-items: center;
   width: 100%;
   height: 100px;
-
+padding:1rem;
   background-color: ${thema.darkfull};
 
   nav {

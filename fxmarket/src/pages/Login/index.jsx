@@ -9,7 +9,7 @@ import * as S from "./style";
 import useAuthStore from "../../store/authStore";
 import { useEffect } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { schemaCreateUser } from "../../components/schemas/schemasCreateUser";
+import { schemaCreateUser } from "../../components/schemas/schemaUser";
 
 const Login = () => {
   const { signInGoogle } = useAuthStore((state) => ({

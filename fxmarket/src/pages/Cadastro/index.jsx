@@ -8,7 +8,7 @@ import Input from '../../components/Input'
 import useAuthStore from '../../store/authStore'
 
 import * as S from './style'
-import { schemaLoginUser } from '../../components/schemas/schemasCreateUser';
+import { schemaLoginUser } from '../../components/schemas/schemaUser';
 
 
 

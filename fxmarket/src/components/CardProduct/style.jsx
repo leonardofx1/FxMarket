@@ -5,8 +5,6 @@ export const CardBody = styled.ul`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-
-  margin: 1rem;
   width: 202px;
   height: 380px;
   overflow: hidden;
@@ -16,6 +14,9 @@ export const CardBody = styled.ul`
   
   border-radius: 15px;
   background-color: ${thema.white};
+
+
+ 
 
   &:hover {
     border:1px solid green;
