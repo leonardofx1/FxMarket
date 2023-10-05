@@ -17,7 +17,9 @@ export const CardBody = styled.ul`
 
 
  
-
+@media  screen and (max-width: 550px){
+  width:90%;
+}
   &:hover {
     border:1px solid green;
   }

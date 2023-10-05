@@ -1,7 +1,11 @@
-import React, { useEffect } from "react";
-import {BiLogIn, BiHome} from 'react-icons/bi'
-import {MdProductionQuantityLimits,  MdOutlineAssignmentInd} from 'react-icons/md'
-import {GoSignOut} from 'react-icons/go'
+import React, { useState }  from "react";
+import { BiLogIn, BiHome, BiMenu } from "react-icons/bi";
+import{GrClose} from "react-icons/gr"
+import {
+  MdProductionQuantityLimits,
+  MdOutlineAssignmentInd,
+} from "react-icons/md";
+import { GoSignOut } from "react-icons/go";
 
 import * as S from "./style";
 
@@ -10,34 +14,66 @@ import logo from "../../assets/img/logo.gif";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [isActiveMenu, setIsActiveMenu] = useState(false)
+  const toggleMenu = () => setIsActiveMenu(state => !state)
 
+  const { signed } = useAuthStore((state) => ({ signed: state.signed }));
+  const { signOut } = useAuthStore((state) => ({ signOut: state.signOut }));
+  const { user } = useAuthStore((state) => ({ user: state.user }));
+  const handleSignOut = () => signOut();
+  console.log(isActiveMenu)
 
-  const {signed} = useAuthStore((state)=>({signed:  state.signed }))
-  const {signOut} = useAuthStore((state)=>({signOut:  state.signOut }))
-  const {user} = useAuthStore((state) =>({user: state.user}))
- const handleSignOut = () => signOut()
   return (
     <S.Header>
       <img src={logo} />
-      <nav>
+      <S.Nav $isActiveMenu={isActiveMenu}>
         <ul>
           <li>
-            <Link to="/"> <BiHome />Home</Link>
+            <Link to="/">
+              
+              <BiHome />
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/produtos">  < MdProductionQuantityLimits />Produtos</Link>
+            <Link to="/produtos">
+              
+              <MdProductionQuantityLimits />
+              Produtos
+            </Link>
           </li>
+         <S.CloseMenu onClick={toggleMenu}>
+         <GrClose />
+         </S.CloseMenu>
           <li>
-            { signed && (<>
-            <a onClick={handleSignOut}><GoSignOut />Sair</a>
-            </>) }
+            {signed && (
+              <>
+                <a onClick={handleSignOut}>
+                  <GoSignOut />
+                  Sair
+                </a>
+              </>
+            )}
           </li>
         </ul>
-    {!signed && (  <section>
-        <Link to="/login"><BiLogIn />Login</Link>
-        <Link to="/cadastro"> <MdOutlineAssignmentInd />Cadastro</Link>
-      </section>)}
-      </nav>
+        {!signed && (
+          <section>
+            <Link to="/login">
+              <BiLogIn />
+              Login
+            </Link>
+            <Link to="/cadastro">
+             
+              <MdOutlineAssignmentInd />
+              Cadastro
+            </Link>
+          </section>
+        )}
+        
+      </S.Nav>
+      <S.MenuIcon>
+              < BiMenu onClick={toggleMenu}/>
+            </S.MenuIcon>
     </S.Header>
   );
 };

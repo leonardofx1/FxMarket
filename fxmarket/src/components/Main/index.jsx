@@ -1,12 +1,10 @@
 import useFetchDocs from "../../firebase/firebaseUtils/useFetchDocs";
 
 import SectionProducts from "../SectionProducts";
-
-import NavTopics from "../NavTopics";
+import ProductLink from "./ProductLink";
 
 import SwipperProduct from "../Swipper";
 import * as S from "./style";
-import ProductLink from "./ProductLink";
 
 const Main = () => {
   const docs = useFetchDocs();
@@ -19,12 +17,7 @@ const Main = () => {
 
       </S.SideBar>
       <S.ContainerProdutos>
-        <S.Products>
-
-          <h1>Produtos incriveis com os melhores preços do mercado </h1>
-          {docs.length > 0 && <SwipperProduct docs={docs} />}
-        </S.Products>
-
+      
         <S.Products>
           <SectionProducts
           id='ebooks'

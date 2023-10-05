@@ -57,16 +57,16 @@ export const ContainerLogo = styled.div `
 `
 export const ContainerProdutos = styled.section `
     display: flex;
-    width: 400px;
+    width: 90%;
     height: 400px;
+
+    max-width:400px;
 
     flex-direction: row;
     flex-wrap: nowrap;
 
-  
-
     background-color: ${thema.darkMedium};
-
+    min-width:auto;
     img {
         width: 100%;
         height: 100%;

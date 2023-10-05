@@ -3,6 +3,7 @@ import { thema } from "../../style/thema";
 
 export const MainContainer = styled.main`
   display: flex;
+  
   justify-content: space-between;
   gap: 5px;
 
@@ -16,10 +17,11 @@ export const MainContainer = styled.main`
 `;
 
 export const ContainerProdutos = styled.section`
+  display:flex;
+  flex-direction: column ;
   width: 80%;
   min-height: 1000px;
   min-width: auto;
-
 
   margin: 0 auto;
   background-color: ${thema.cinzaMedium};
@@ -30,8 +32,6 @@ export const ContainerProdutos = styled.section`
 export const Products = styled.section`
   width: 100%;
   height: auto;
-
-  
 
   article div:has(h2) {
     width: 100%;

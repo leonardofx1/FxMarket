@@ -8,3 +8,8 @@ export const thema = {
 
     fontFamily: "Libre Baskerville"
 }
+
+export const device ={
+    mobile:'550px',
+    notebook:'750px' ,
+}
