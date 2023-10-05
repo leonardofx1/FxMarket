@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { thema } from "../../style/thema";
+import { device, thema } from "../../style/thema";
 export const CardBody = styled.ul`
   display: flex;
   flex-direction: column;
@@ -17,8 +17,9 @@ export const CardBody = styled.ul`
 
 
  
-@media  screen and (max-width: 550px){
-  width:90%;
+@media  screen and (max-width: ${device.mobile}){
+  width:320px;
+
 }
   &:hover {
     border:1px solid green;

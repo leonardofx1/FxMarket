@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { thema } from "../../style/thema";
+import { device, thema } from "../../style/thema";
 
 export const MainContainer = styled.main`
   display: flex;
@@ -28,6 +28,9 @@ export const ContainerProdutos = styled.section`
   h1 {
     color: ${thema.darkMedium};
   }
+  @media screen and (max-width:${device.mobile}){
+    width:90%
+  }
 `;
 export const Products = styled.section`
   width: 100%;
@@ -53,6 +56,9 @@ export const Products = styled.section`
     width: 100%;
     height: auto;
     margin: 1.5rem 0;
+  }
+  @media screen and (max-width:${device.mobile}){
+    width:95%;
   }
 `;
 
@@ -83,5 +89,9 @@ export const SideBar = styled.aside`
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  @media screen and (max-width:${device.mobile}){
+    display:none;
   }
 `;
