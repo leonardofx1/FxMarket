@@ -7,7 +7,7 @@ import logo from "../../assets/img/logo.gif";
 import gmail from "../../assets/img/gmail.png";
 import * as S from "./style";
 import useAuthStore from "../../store/authStore";
-import { useEffect } from "react";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { schemaCreateUser } from "../../components/schemas/schemaUser";
 
@@ -40,7 +40,7 @@ const Login = () => {
         <img src={logo} alt="" />
         <S.LoginForm onSubmit={handleSubmit(handleUserLogin)}>
           <div>
-            {" "}
+    
             <Input
               placeHolder="e-mail"
               register={register}
@@ -58,12 +58,12 @@ const Login = () => {
             />
             {errors.password?.message && (
               <span> {errors.password?.message}</span>
-            )}{" "}
+            )}
           </div>
           <S.BtnLogin>entrar</S.BtnLogin>
           <S.LoginInGmail onClick={handleLoginGmail}>
-            {" "}
-            <img src={gmail} alt="" /> entrar com o Google
+    
+            <img src={gmail} alt="logo gmail" /> entrar com o Google
           </S.LoginInGmail>
         </S.LoginForm>
       </S.Main>

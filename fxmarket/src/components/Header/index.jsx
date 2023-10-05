@@ -42,7 +42,7 @@ const Header = () => {
               Produtos
             </Link>
           </li>
-         <S.CloseMenu onClick={toggleMenu}>
+         <S.CloseMenu  $isActiveMenu={isActiveMenu} onClick={toggleMenu}>
          <GrClose />
          </S.CloseMenu>
           <li>

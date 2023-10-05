@@ -121,6 +121,8 @@ export const MenuIcon = styled.span`
   }
 `;
 export const CloseMenu = styled.section`
+  ${(props) => props.$isActiveMenu ?
+  css`
   position: absolute;
   font-size: 1rem;
   top:15px;
@@ -128,4 +130,13 @@ export const CloseMenu = styled.section`
   background-color: white;
   border-radius: 50%;
   padding:5px;
+  `
+  : css`
+  display: none;
+  svg {
+    display:none
+  }
+  `
+  
+} 
 `;

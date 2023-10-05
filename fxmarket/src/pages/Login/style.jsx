@@ -1,14 +1,27 @@
 import styled from "styled-components";
-import { thema } from "../../style/thema";
+import { device, thema } from "../../style/thema";
 
 export const Main = styled.main`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+ 
+ 
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  max-height:auto;
 
   background-color: ${thema.darkMedium};
+
+  img{
+    width:320px;
+  }
+
+  @media screen and (max-width:${device.notebook}){
+    & > img:first-child {
+      display:none;
+    }
+  }
 `;
 
 export const LoginForm = styled.form`
@@ -19,7 +32,7 @@ export const LoginForm = styled.form`
 
   gap: 2rem;
 
-  width: 340px;
+  min-width: 340px;
   min-height: 380px;
   max-height: auto;
   padding: 1rem;
@@ -92,4 +105,7 @@ export const LoginInGmail = styled(BtnLogin)`
 
   border: none;
   background-color: #ff0000bb;
+  img {
+    width:35px;
+  }
 `;
