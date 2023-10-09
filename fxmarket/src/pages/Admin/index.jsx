@@ -3,13 +3,15 @@ import * as S from "./style";
 
 import { useForm } from "react-hook-form";
 import Input from "../../components/Input";
+import cardData from "../../firebase/firebaseUtils/cardData";
+import Header from "../../components/Header";
 
 const Admin = () => {
   const { formState: erros, register, handleSubmit } = useForm();
 
-
-
   return (
+  <>
+  <Header />
     <S.Form onSubmit={handleSubmit(cardData)}>
       <div>
         <label htmlFor="">
@@ -22,6 +24,12 @@ const Admin = () => {
           ></textarea>
         </label>
         <Input
+          type="text"
+          register={register}
+          placeHolder="título"
+          name="titulo"
+        />
+        <Input
           type="number"
           register={register}
           placeHolder="valor do produto"
@@ -32,7 +40,7 @@ const Admin = () => {
           register={register}
           placeHolder="quantidade de parcelas"
           name="quantidade"
-        />
+        />  
       </div>
       <div>
         <Input
@@ -41,6 +49,13 @@ const Admin = () => {
           placeHolder="valor das parcelas"
           name="valorParcelas"
         />
+      <Input
+        type="text"
+        register={register}
+        placeHolder="Link do produto"
+        name="linkAfiliado"
+      />
+   
         <Input
           type="text"
           register={register}
@@ -54,20 +69,23 @@ const Admin = () => {
           name="imagen"
         />
       </div>
-      <div>
-        <select name="topicos"  {...register('subCollection')}>
+      <S.Topicos>
+        <p>
+          coleção
+        </p>
+        <select name="topicos" {...register("subCollection")}>
           <optgroup>
             <option value="E-book">ebook</option>
             <option value="cursos">cursos</option>
             <option value="saude">Saúde</option>
             <option value="esporte">esporte</option>
             <option value="tecnologias">tecnologias</option>
-
           </optgroup>
         </select>
-      </div>
+      </S.Topicos>
       <button> Cadastrar</button>
     </S.Form>
+  </>
   );
 };
 

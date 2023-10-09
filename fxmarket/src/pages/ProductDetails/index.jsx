@@ -1,35 +1,48 @@
-import Header from '../../components/Header'
-import * as S from "./style"
+import Header from "../../components/Header";
+import * as S from "./style";
 
-import adestramento from '../../assets/img/adestramento.jpg'
+import adestramento from "../../assets/img/adestramento.jpg";
+import { useParams } from "react-router-dom";
+import useDocCardDetail from "../../firebase/firebaseUtils/useDocCardDetail";
+import { useEffect } from "react";
+
+
+const formatCurrency = (value) => new Intl.NumberFormat('pt-br', { style: 'currency', currency: 'BRL' }).format(value)
+
+
+
 const ProductDetails = () => {
+  const id = useParams();
 
-    return (
-   <>
-   <Header />
-    <S.Main>
+  const { dataCard} = useDocCardDetail(id.id);
+  console.log(id.id, dataCard)
+  return (
+    <>
+      <Header />
+     {dataCard.valorProduto > 0 ? ( <S.Main>
+        <S.CardBody>
+          <S.CardImg>
+            <img src={dataCard.img} alt="" />
+          </S.CardImg>
+          <S.CardInfo>
+            <div>
+              <h1>{dataCard.titulo}</h1>
+              <h2>
+                {dataCard.descricao}
+              </h2>
 
-<S.CardBody>
-    <S.CardImg>
-        <img src={adestramento} alt="" />   
-    </S.CardImg>
-    <S.CardInfo>
-    <div>
-    <h1>Adestramento canino</h1>
-       <h2>Smartphone Motorola Moto E22 Preto 128GB, 4GB RAM, Tela de 6.5", Câmera Traseira Dupla, Android 12 e Processador Octa Core</h2>
-   
-    <S.Price> R$ 2000</S.Price>
-       <S.PricePromotion>
-       ou até 6x de R$ 166,48 sem juros no Cartão de Crédito
-       </S.PricePromotion>
+              <S.Price> R$ {formatCurrency(dataCard.valorProduto)}</S.Price>
+              <S.PricePromotion>
+                ou até {dataCard.quantidade} x de R$ {formatCurrency(dataCard.valorParcelas)} sem juros no Cartão de Crédito
+              </S.PricePromotion>
+            </div>
 
-    </div>
-       <S.Button> Comprar</S.Button>
-    </S.CardInfo>
-</S.CardBody>
-</S.Main>       </>
-        
-    )
-}
+            <S.PageCompras href={dataCard.linkAfiliado}> Comprar</S.PageCompras>
+          </S.CardInfo>
+        </S.CardBody>
+      </S.Main>):<p> carregando </p>}
+    </>
+  );
+};
 
-export default ProductDetails
+export default ProductDetails;

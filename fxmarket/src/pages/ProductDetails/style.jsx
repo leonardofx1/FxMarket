@@ -97,12 +97,17 @@ export const PricePromotion = styled.p `
     margin: 15px 0;
 `
 
-export const Button = styled.button `
-    width:220px;
+export const PageCompras = styled.a `
+    display: flex;
+    width:90%;
     height:50px;
+
+    justify-content:center;
+    align-items: center;
 
     border:none;
     border-radius:5px;
+
     background-color:${thema.priceColor};
     margin: 15px 0;
     font-size: 1.5rem;

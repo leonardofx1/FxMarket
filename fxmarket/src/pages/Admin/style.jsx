@@ -6,8 +6,10 @@ export const Form = styled.form`
   flex-direction: rows;
   flex-wrap: wrap;
   justify-content: center;
-  height: 90vh;
-  width: 940px;
+  min-height: 90vh;
+  width: 90%;
+
+  max-height:auto;
   min-width: auto;
   margin: 0 auto;
 
@@ -16,6 +18,7 @@ export const Form = styled.form`
     width: 50%;
     min-width: 350px
   }
+ 
   label {
     display: flex;
     flex-direction: column;
@@ -49,14 +52,28 @@ export const Form = styled.form`
 button {
   width: 80%;
   height: 50px;
+  margin:1rem;
+
   background-color: green;
   border: none;
+
   font-size: 1.2rem;
   font-weight: bold;
   color:white;
   border-radius: 15px;
+
+
   &:hover {
     box-shadow: 2px 2px 15px black;
     cursor: pointer;
   }
 }`;
+
+export const Topicos = styled.section `
+    width:90%;
+    margin:0 1rem; 
+    justify-self: end;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    `

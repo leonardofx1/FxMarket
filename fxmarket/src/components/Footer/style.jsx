@@ -9,9 +9,19 @@ export const Rodape = styled.footer `
     height:50px;
 
     background-color:${thema.darkfull};
+
+    padding:1rem;
+    gap:1rem;
  
     a {
+        display:flex;
+
+        align-items: center;
+        width:auto;
+        
         color:white;
+        gap:.5rem;
+
     }
 
 `

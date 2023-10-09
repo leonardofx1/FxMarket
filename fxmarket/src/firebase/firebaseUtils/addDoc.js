@@ -1,5 +1,5 @@
 import {addDoc, collection} from 'firebase/firestore'
-import { db } from '../firebaseSdk'
+import { db } from './firebaseSdk'
 
 const createCard = (data, urlImg) => {
 
