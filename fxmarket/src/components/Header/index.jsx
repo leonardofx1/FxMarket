@@ -19,13 +19,14 @@ const Header = () => {
 
   const { signed } = useAuthStore((state) => ({ signed: state.signed }));
   const { signOut } = useAuthStore((state) => ({ signOut: state.signOut }));
-  const { user } = useAuthStore((state) => ({ user: state.user }));
+
   const handleSignOut = () => signOut();
-  console.log(isActiveMenu)
+
 
   return (
     <S.Header>
-      <img src={logo} />
+      <Link to='/'>
+      <img src={logo} /></Link>
       <S.Nav $isActiveMenu={isActiveMenu}>
         <ul>
           <li>

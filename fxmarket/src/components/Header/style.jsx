@@ -37,8 +37,8 @@ export const Header = styled.header`
       }
     }
   }
-  img {
-    height: 100%;
+  a img {
+    height: 100px;
     width: auto;
     padding: 0.3em;
   }
